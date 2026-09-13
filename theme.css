@@ -1,0 +1,435 @@
+:root {
+    color-scheme: dark;
+
+    /*
+     * Aptlantis Zig
+     * Reference palette -> semantic role -> SiYuan component token.
+     * Near-neutrals carry the interface; gold, amber, and sage carry meaning.
+     */
+    --apt-bg-0: #06090E;
+    --apt-bg-1: #101512;
+    --apt-bg-2: #181E1A;
+    --apt-bg-3: #232A25;
+    --apt-ink: #E3E6DE;
+    --apt-ink-soft: #BBC4BC;
+    --apt-muted: #829087;
+    --apt-border: #38423B;
+    --apt-primary: #B99531;
+    --apt-gold: #D9BE55;
+    --apt-amber: #C99B3B;
+    --apt-teal: #6A9A8E;
+    --apt-sage: #7B9873;
+
+    --b3-theme-primary: var(--apt-primary);
+    --b3-theme-primary-light: rgba(217, 190, 85, 0.26);
+    --b3-theme-primary-lighter: rgba(217, 190, 85, 0.15);
+    --b3-theme-primary-lightest: rgba(217, 190, 85, 0.08);
+    --b3-theme-secondary: var(--apt-teal);
+    --b3-theme-background: var(--apt-bg-0);
+    --b3-theme-surface: var(--apt-bg-1);
+    --b3-theme-surface-light: var(--apt-bg-2);
+    --b3-theme-error: #D66B61;
+    --b3-theme-on-primary: #10130F;
+    --b3-theme-on-secondary: #06090E;
+    --b3-theme-on-background: var(--apt-ink);
+    --b3-theme-on-surface: var(--apt-ink-soft);
+    --b3-border-color: rgba(187, 196, 188, 0.20);
+    --b3-scroll-color: rgba(187, 196, 188, 0.27);
+    --b3-list-hover: rgba(227, 230, 222, 0.055);
+    --b3-theme-background-light: rgba(227, 230, 222, 0.035);
+    --b3-theme-surface-lighter: rgba(227, 230, 222, 0.065);
+    --b3-card-error-color: #E8B8B2;
+    --b3-card-error-background: rgba(212, 99, 88, 0.15);
+    --b3-card-warning-color: #EFE0B2;
+    --b3-card-warning-background: rgba(209, 171, 61, 0.15);
+    --b3-card-info-color: #C2DDD6;
+    --b3-card-info-background: rgba(106, 154, 142, 0.15);
+    --b3-card-success-color: #D0DEC9;
+    --b3-card-success-background: rgba(114, 136, 105, 0.15);
+    --b3-font-color: var(--apt-ink);
+    --b3-font-color1: #D9BE55;
+    --b3-font-color2: var(--apt-amber);
+    --b3-font-color3: var(--apt-teal);
+    --b3-font-color4: var(--apt-sage);
+    --b3-font-color5: var(--apt-ink-soft);
+    --b3-font-color6: #80B5A8;
+    --b3-font-color7: #DFB847;
+    --b3-font-color8: var(--b3-theme-error);
+    --b3-font-color9: #B888A2;
+    --b3-font-color10: #5C9E94;
+    --b3-font-color11: #88A67B;
+    --b3-font-color12: #E4C75B;
+    --b3-font-color13: var(--b3-theme-background);
+    --b3-font-background1: rgba(234, 211, 101, 0.13);
+    --b3-font-background2: rgba(209, 171, 61, 0.12);
+    --b3-font-background3: rgba(106, 154, 142, 0.12);
+    --b3-font-background4: rgba(114, 136, 105, 0.12);
+    --b3-font-background5: rgba(196, 207, 174, 0.10);
+    --b3-font-background6: rgba(128, 181, 168, 0.12);
+    --b3-font-background7: rgba(223, 184, 71, 0.12);
+    --b3-font-background8: rgba(212, 99, 88, 0.13);
+    --b3-font-background9: rgba(184, 136, 162, 0.11);
+    --b3-font-background10: rgba(92, 158, 148, 0.11);
+    --b3-font-background11: rgba(136, 166, 123, 0.11);
+    --b3-font-background12: rgba(228, 199, 91, 0.12);
+    --b3-font-background13: var(--b3-theme-on-background);
+
+    /* Native SiYuan state coverage */
+    --b3-theme-success: #7B9873;
+    --b3-theme-on-surface-light: var(--apt-ink-soft);
+    --b3-theme-on-surface-lighter: #69766E;
+    --b3-theme-on-error: #FFF7F5;
+    --b3-body-background: #080C0A;
+    --b3-body-background-hl-opacity: 0.16;
+    --b3-body-background-hl: 48, 62%, 55%;
+    --b3-toolbar-color: var(--b3-theme-on-surface-light);
+    --b3-toolbar-hover: rgba(227, 230, 222, 0.06);
+    --b3-menu-background: var(--apt-bg-1);
+    --b3-menu-icon-color: rgba(187, 196, 188, 0.74);
+    --b3-tooltips-background: #040609;
+    --b3-tooltips-color: var(--apt-ink);
+    --b3-tooltips-second-color: var(--apt-muted);
+    --b3-tooltips-shadow: 0 4px 14px rgba(0, 0, 0, 0.50);
+    --b3-empty-color: var(--apt-muted);
+    --b3-mask-background: rgba(3, 5, 8, 0.60);
+    --b3-highlight-color: var(--apt-ink);
+    --b3-highlight-background: #443A1B;
+    --b3-highlight-current-background: #62501D;
+    --b3-switch-background: #29322C;
+    --b3-switch-border: #7B887F;
+    --b3-switch-hover: rgba(227, 230, 222, 0.08);
+    --b3-switch-checked: var(--b3-theme-on-primary);
+    --b3-switch-checked-background: var(--apt-primary);
+    --b3-switch-checked-hover: #C8A943;
+    --b3-switch-checked-hover2: rgba(227, 230, 222, 0.07);
+    --b3-dock-shadow-color: #030508;
+    --b3-point-shadow: inset 0 1px rgba(227, 230, 222, 0.07), 0 3px 8px rgba(0, 0, 0, 0.30);
+    --b3-dialog-shadow: 0 18px 48px rgba(0, 0, 0, 0.54), 0 0 0 1px rgba(187, 196, 188, 0.10);
+    --b3-button-shadow: 0 1px 2px rgba(0, 0, 0, 0.32);
+    --b3-button-active-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.36);
+    --b3-graph-p-point: var(--apt-primary);
+    --b3-graph-heading-point: #B4C89E;
+    --b3-graph-math-point: var(--apt-sage);
+    --b3-graph-code-point: var(--apt-teal);
+    --b3-graph-table-point: #5C9E94;
+    --b3-graph-list-point: var(--apt-gold);
+    --b3-graph-todo-point: var(--apt-amber);
+    --b3-graph-olist-point: #B29048;
+    --b3-graph-listitem-point: #BA7C3B;
+    --b3-graph-bq-point: #8F85A2;
+    --b3-graph-callout-point: var(--b3-theme-success);
+    --b3-graph-super-point: #ABA2BA;
+    --b3-graph-doc-point: var(--apt-ink);
+    --b3-graph-tag-point: #A8B868;
+    --b3-graph-asset-point: #6A9A8E;
+    --b3-graph-line: rgba(187, 196, 188, 0.42);
+    --b3-graph-ref-line: var(--b3-theme-error);
+    --b3-graph-tag-line: #65743D;
+    --b3-graph-tag-tag-line: #A8B868;
+    --b3-graph-asset-line: #3D6B63;
+    --b3-graph-hl-point: var(--apt-amber);
+    --b3-graph-hl-line: #BA7C3B;
+    --b3-protyle-code-background: #0A0F0C;
+    --b3-protyle-inline-link-color: var(--apt-gold);
+    --b3-protyle-inline-mark-background: #443A1B;
+    --b3-protyle-inline-mark-color: var(--apt-ink);
+    --b3-protyle-inline-tag-color: #B4BEA6;
+    --b3-protyle-inline-blockref-color: #B4C89E;
+    --b3-protyle-inline-fileref-color: var(--apt-amber);
+    --b3-callout-note: var(--apt-teal);
+    --b3-callout-tip: var(--b3-theme-success);
+    --b3-callout-caution: var(--b3-theme-error);
+    --b3-callout-important: #B4C89E;
+    --b3-callout-warning: var(--apt-amber);
+    --b3-table-even-background: rgba(227, 230, 222, 0.026);
+    --b3-av-gallery-shadow: 0 2px 5px rgba(0, 0, 0, 0.20), 0 0 0 1px var(--b3-border-color);
+    --b3-embed-background: transparent;
+    --b3-bq-background: transparent;
+    --b3-parent-background: var(--b3-theme-background);
+}
+
+body {
+    background: var(--b3-body-background);
+    color: var(--apt-ink);
+}
+
+.toolbar,
+.layout-tab-bar,
+.dock {
+    background: #090D0B;
+    border-color: var(--b3-border-color);
+}
+
+.status {
+    background: #070A09;
+    border-color: var(--b3-border-color);
+    color: var(--apt-muted);
+}
+
+.layout__dockl,
+.layout__dockr,
+.layout__dockb,
+.file-tree,
+.dockPanel {
+    background: var(--apt-bg-1);
+    border-color: var(--b3-border-color);
+}
+
+.layout__center .layout-tab-container,
+.layout-tab-container,
+.protyle,
+.protyle-content,
+.protyle-preview {
+    background: #0D120F;
+}
+
+.b3-menu,
+.b3-dialog__container,
+.block__popover,
+.search__layout,
+.config__tab-container {
+    background: var(--apt-bg-1);
+    border-color: var(--b3-border-color);
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.34);
+}
+
+.protyle-breadcrumb,
+.protyle-toolbar {
+    background: rgba(16, 21, 18, 0.97);
+    border-color: var(--b3-border-color);
+}
+
+.b3-list-item:hover,
+.b3-menu__item:hover {
+    background: var(--b3-list-hover);
+    color: var(--apt-ink);
+}
+
+.b3-list-item--focus,
+.b3-menu__item--current,
+.layout-tab-bar .item--focus {
+    background: var(--b3-theme-primary-lighter);
+    color: var(--apt-ink);
+}
+
+.layout-tab-bar .item--focus,
+.b3-button--text {
+    color: var(--apt-gold);
+}
+
+.b3-button {
+    background: var(--apt-primary);
+    color: var(--b3-theme-on-primary);
+    border-color: rgba(209, 171, 61, 0.22);
+}
+
+.b3-button:hover {
+    background: #C8A943;
+    color: var(--b3-theme-on-primary);
+}
+
+.protyle-title__input {
+    color: var(--apt-ink);
+}
+
+.protyle-wysiwyg [data-node-id] {
+    caret-color: var(--apt-gold);
+}
+
+.protyle-wysiwyg [data-node-id]:hover {
+    background: rgba(227, 230, 222, 0.025);
+}
+
+.protyle-wysiwyg ::selection,
+.protyle-title__input::selection,
+::selection {
+    background: rgba(55, 64, 50, 0.72);
+    color: var(--apt-ink);
+}
+
+.protyle-wysiwyg a,
+.b3-typography a,
+.protyle-breadcrumb__item--active {
+    color: var(--apt-gold);
+}
+
+.protyle-wysiwyg [data-type="NodeHeading"][data-subtype="h1"],
+.b3-typography h1 {
+    color: var(--apt-ink);
+}
+
+.protyle-wysiwyg [data-type="NodeHeading"][data-subtype="h2"],
+.b3-typography h2 {
+    color: var(--apt-ink-soft);
+    border-bottom: 1px solid var(--b3-border-color);
+}
+
+.protyle-wysiwyg [data-type="NodeHeading"][data-subtype="h3"],
+.b3-typography h3 {
+    color: #C9CDBF;
+}
+
+.protyle-wysiwyg blockquote,
+.b3-typography blockquote {
+    background: rgba(187, 196, 188, 0.045);
+    border-left: 3px solid rgba(217, 190, 85, 0.52);
+    color: var(--apt-ink-soft);
+}
+
+.protyle-wysiwyg code:not(.hljs),
+.b3-typography code:not(.hljs) {
+    background: rgba(217, 190, 85, 0.075);
+    color: var(--apt-gold);
+    border: 1px solid rgba(217, 190, 85, 0.16);
+}
+
+.protyle-wysiwyg pre,
+.b3-typography pre,
+.hljs {
+    background: #090D0B;
+    color: var(--apt-ink);
+    border: 1px solid var(--b3-border-color);
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-title.function_ {
+    color: var(--apt-gold);
+}
+
+.hljs-string,
+.hljs-attr,
+.hljs-symbol {
+    color: #90742E;
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-built_in {
+    color: var(--apt-amber);
+}
+
+.hljs-comment,
+.hljs-quote {
+    color: var(--apt-muted);
+    font-style: italic;
+}
+
+.hljs-title,
+.hljs-title.function_,
+.hljs-section,
+.hljs-name {
+    color: #85B4A9;
+}
+
+.hljs-built_in,
+.hljs-type,
+.hljs-class,
+.hljs-title.class_ {
+    color: #A7B99E;
+}
+
+.hljs-property,
+.hljs-variable,
+.hljs-params,
+.hljs-punctuation,
+.hljs-operator {
+    color: var(--apt-ink-soft);
+}
+
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-variable.language_ {
+    color: var(--apt-sage);
+}
+
+.hljs-addition {
+    color: #A9C8A1;
+    background: rgba(123, 152, 115, 0.12);
+}
+
+.hljs-deletion {
+    color: #E6A19B;
+    background: rgba(214, 107, 97, 0.11);
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-strong {
+    font-weight: 700;
+}
+
+.protyle-wysiwyg table,
+.b3-typography table {
+    background: rgba(227, 230, 222, 0.012);
+    border-color: var(--b3-border-color);
+}
+
+.protyle-wysiwyg th,
+.b3-typography th {
+    background: rgba(217, 190, 85, 0.055);
+    color: var(--apt-ink);
+}
+
+.protyle-wysiwyg td,
+.protyle-wysiwyg th,
+.b3-typography td,
+.b3-typography th {
+    border-color: var(--b3-border-color);
+}
+
+.protyle-wysiwyg mark,
+.b3-typography mark {
+    background: rgba(217, 190, 85, 0.20);
+    color: var(--apt-ink);
+}
+
+.b3-text-field,
+.b3-text-field.fn__block,
+.b3-select {
+    background: var(--apt-bg-2);
+    color: var(--apt-ink);
+    border-color: var(--b3-border-color);
+}
+
+.b3-button--text,
+.b3-button--cancel {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    color: var(--apt-gold);
+}
+
+.b3-button--outline {
+    background: transparent;
+    border-color: rgba(217, 190, 85, 0.46);
+    color: var(--apt-gold);
+}
+
+.b3-button--remove,
+.b3-button--warning {
+    background: #804038;
+    border-color: #AB544A;
+    color: #FFF7F5;
+}
+
+.b3-button:disabled,
+.b3-button[disabled],
+.b3-text-field:disabled,
+.b3-select:disabled,
+.fn__disabled {
+    cursor: not-allowed;
+    opacity: 0.48;
+}
+
+:where(button, a, input, select, textarea, [tabindex]):focus-visible {
+    outline: 2px solid rgba(217, 190, 85, 0.82);
+    outline-offset: 2px;
+}
+
+.protyle-wysiwyg a:visited,
+.b3-typography a:visited {
+    color: #ABA2BA;
+}

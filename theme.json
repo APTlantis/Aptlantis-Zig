@@ -1,0 +1,32 @@
+{
+  "name": "aptlantis-zig",
+  "author": "Aptlantis",
+  "url": "https://aptlantis.studio",
+  "version": "0.1.1",
+  "minAppVersion": "3.7.0",
+  "displayName": {
+    "default": "Aptlantis Zig"
+  },
+  "description": {
+    "default": "A restrained dark SiYuan theme with neutral charcoal surfaces and selective gold, amber, teal, and sage accents from the Aptlantis Zig palette."
+  },
+  "readme": {
+    "default": "README.md"
+  },
+  "icon": "icon.png",
+  "preview": "preview.png",
+  "modes": [
+    "dark"
+  ],
+  "frontends": [
+    "all"
+  ],
+  "keywords": [
+    "aptlantis",
+    "zig",
+    "dark",
+    "gold",
+    "amber",
+    "sage"
+  ]
+}
