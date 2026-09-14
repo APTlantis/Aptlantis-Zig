@@ -1,7 +1,7 @@
 {
   "name": "aptlantis-zig",
   "author": "Aptlantis",
-  "url": "https://aptlantis.studio",
+  "url": "https://github.com/APTlantis/Aptlantis-Zig",
   "version": "0.1.1",
   "minAppVersion": "3.7.0",
   "displayName": {
